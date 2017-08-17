@@ -1,0 +1,63 @@
+<web-app id="WebApp_ID" version="2.5"
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd">
+ 
+	<display-name>Spring MVC Application</display-name>
+ 
+	<servlet>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+ 
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
+	</context-param>
+ 
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	
+ <mime-mapping>
+<extension>doc</extension>
+<mime-type>application/msword</mime-type>
+</mime-mapping>
+<mime-mapping>
+<extension>xls</extension>
+<mime-type>application/msexcel</mime-type>
+</mime-mapping>
+<mime-mapping>
+<extension>pdf</extension>
+<mime-type>application/pdf</mime-type>
+</mime-mapping>
+<mime-mapping>
+<extension>zip</extension>
+<mime-type>application/zip</mime-type>
+</mime-mapping>
+<mime-mapping>
+<extension>rar</extension>
+<mime-type>application/rar</mime-type>
+</mime-mapping>
+<mime-mapping>
+<extension>txt</extension>
+<mime-type>application/txt</mime-type>
+</mime-mapping>
+<mime-mapping>
+<extension>chm</extension>
+<mime-type>application/mshelp</mime-type>
+</mime-mapping>
+ 
+ 
+</web-app>
